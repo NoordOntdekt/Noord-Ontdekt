@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#123b3b" />
+  <meta name="description" content="Ontdek Noord-Nederland met Noord Ontdekt. Wandel, fiets of zwem, verdien punten en ontdek musea en bijzondere plekken in Groningen, Friesland en Drenthe." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://noordontdekt.github.io/Noord-Ontdekt/" />
+  <link rel="sitemap" type="application/xml" href="https://noordontdekt.github.io/Noord-Ontdekt/sitemap.xml" />
+  <title>Noord Ontdekt | Beweeg. Ontdek. Verdien.</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:site_name" content="Noord Ontdekt" />
+  <meta property="og:url" content="https://noordontdekt.github.io/Noord-Ontdekt/" />
+  <meta property="og:title" content="Noord Ontdekt | Beweeg. Ontdek. Verdien." />
+  <meta property="og:description" content="Wandel, fiets of zwem, verdien punten en ontdek musea en bijzondere plekken in Noord-Nederland." />
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Noord Ontdekt",
+      "url": "https://noordontdekt.github.io/Noord-Ontdekt/",
+      "description": "Ontdek Noord-Nederland door te wandelen, fietsen of zwemmen. Verdien punten en ontdek musea en bijzondere plekken.",
+      "applicationCategory": "TravelApplication",
+      "operatingSystem": "Any",
+      "inLanguage": "nl"
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="musea.css" />
+  <link rel="stylesheet" href="map.css?v=4" />
+  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="accessibility.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand brand-modal-trigger" href="#" aria-label="Noord Ontdekt logo openen">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="logo-app.png" alt="" class="brand-logo" />
+        </span>
+        <span><strong>Noord</strong><em>Ontdekt</em></span>
+      </a>
+      <nav class="side-nav" aria-label="Hoofdnavigatie">
+        <button class="nav-item active" data-tab="home"><span class="nav-icon">⌂</span> Home</button>
+        <button class="nav-item" data-tab="ai"><span class="nav-icon">✦</span> Noord AI</button>
+        <button class="nav-item" data-tab="musea"><span class="nav-icon">○</span> Musea</button>
+        <button class="nav-item" data-tab="klassement"><span class="nav-icon">↗</span> Leaderboard</button>
+        <button class="nav-item" data-tab="kaart"><span class="nav-icon">⌖</span> Kaart</button>
+        <button class="nav-item" data-tab="geschiedenis"><span class="nav-icon">↺</span> Geschiedenis</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="profile-mini"><div class="avatar">MB</div><div><strong>Jij, Mercedes B.</strong><span>Rang #1</span></div><span class="more">•••</span></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="mobile-brand brand-modal-trigger" role="button" tabindex="0" aria-label="Noord Ontdekt logo openen">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="logo-app.png" alt="" class="brand-logo" />
+          </span>
+          <strong>Noord Ontdekt</strong>
+        </div>
+        <div class="topbar-tools">
+          <label class="language-picker" for="language-select">Taal
+            <select id="language-select" aria-label="Kies een taal">
+              <option value="nl">Nederlands</option><option value="en">English</option><option value="de">Deutsch</option><option value="fr">Français</option><option value="es">Español</option><option value="it">Italiano</option><option value="pt">Português</option><option value="da">Dansk</option><option value="sv">Svenska</option><option value="no">Norsk</option><option value="tr">Türkçe</option><option value="fy">Frysk</option>
+            </select>
+          </label>
+          <button class="menu-toggle" type="button" aria-label="Open navigatie" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </header>
+
+      <section class="view active" id="home">
+        <div class="page-title"><div><h1 data-view-title="home"><i>Beweeg meer. Ontdek Noord-Nederland.</i></h1></div></div>
+        <div class="home-hero">
+          <div class="home-hero-copy">
+            <p class="eyebrow">NOORD ONTDEKT</p>
+            <div class="home-intro-card">
+              <span class="home-intro-icon" aria-hidden="true">✦</span>
+              <div class="home-intro-content">
+                <h2>Beweeg meer. Ontdek Noord.</h2>
+                <p>
+                  NoordOntdekt helpt je om zwemmend, lopend of fietsend nieuwe plekken te ontdekken.
+                  De AI houdt je activiteit bij en je verdient punten voor de afstand die je aflegt.
+                </p>
+                <p>
+                  Wissel je punten in voor een museumbezoek in Noord-Nederland. Zo stimuleren we
+                  beweging en toerisme in het noorden, met minder telefoongebruik tussendoor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="home-grid home-tabs" aria-label="Kies een onderdeel">
+          <button class="home-card home-link home-card--quarter" data-target="ai">
+            <span class="home-icon">✦</span>
+            <div class="home-card-copy">
+              <strong>Noord AI</strong>
+              <small>Chat met een AI</small>
+            </div>
+          </button>
+          <button class="home-card home-link home-card--threequarter" data-target="musea">
+            <span class="home-icon">○</span>
+            <div class="home-card-copy">
+              <strong>Musea</strong>
+              <small>Bezoek culturele plekken</small>
+            </div>
+          </button>
+          <button class="home-card home-link home-card--threequarter" data-target="klassement">
+            <span class="home-icon">↗</span>
+            <div class="home-card-copy">
+              <strong>Leaderboard</strong>
+              <small>Vergelijk je punten met vrienden</small>
+            </div>
+          </button>
+          <button class="home-card home-link home-card--quarter" data-target="kaart">
+            <span class="home-icon">⌖</span>
+            <div class="home-card-copy">
+              <strong>Kaart</strong>
+              <small>Bekijk de bekendste spots</small>
+            </div>
+          </button>
+          <button class="home-card home-link home-card--full" data-target="geschiedenis">
+            <span class="home-icon">↺</span>
+            <div class="home-card-copy">
+              <strong>Geschiedenis</strong>
+              <small>Je recente afgelegde afstanden</small>
+            </div>
+          </button>
+          <button class="home-card home-link home-card--cta" type="button" data-target="over-ons" aria-label="Over ons">
+            <span class="home-icon">✦</span>
+            <div class="home-card-copy">
+              <strong>Over ons</strong>
+              <small>Meer over de makers van de app</small>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <section class="view" id="over-ons">
+        <div class="page-title about-page-heading">
+          <div><p class="eyebrow">ONS VERHAAL</p><h1>Over <i>ons</i></h1></div>
+        </div>
+        <div class="about-story-hero">
+          <span class="about-story-mark" aria-hidden="true">✳</span>
+          <p class="about-story-kicker">STELLINGWERFCOLLEGE · NOORD-NEDERLAND</p>
+          <p class="about-story-intro">Wij zijn het groepje Noord-Ontdekt van het Stellingwerfcollege (Mercedes, Jildau, Gerko, Sander, Morris en Jens)</p>
+          <button class="about-map-link" type="button" data-target="kaart">Bekijk de kaart <span aria-hidden="true">→</span></button>
+        </div>
+
+        <div class="about-story-timeline">
+          <article class="about-story-card">
+            <span class="about-story-number">01</span>
+            <div>
+              <p class="about-story-label">HACKATHON</p>
+              <p>Eerst, de Hackathon houdt in dat scholen verdeelt over heel Noord Nederland aan de slag gaan met 1 van de 5 tracks ze hebben hiervoor ongeveer 30 uur verdeeld over 2 dagen en sommige overnachten zelfs op school. Nadat de tijd is afgelopen mogen de teams hun idee pitchen aan de jury en dan vallen er geld bedragen te winnen van 200 tot 400 euro.</p>
+            </div>
+          </article>
+          <article class="about-story-card">
+            <span class="about-story-number">02</span>
+            <div>
+              <p class="about-story-label">DRAGONS DEN</p>
+              <p>De dragons den is het vervolg project van de Hackathon, de dragons den is een maand na de Hackathon en de teams hebben in die tijd de kans om hun idee beter uit te gaan werken om vervolgens weer samen te komen in hun eigen provincie om de verbeterde ideeën te pitchen aan de jury.</p>
+            </div>
+          </article>
+          <article class="about-story-card about-story-track">
+            <span class="about-story-number">03</span>
+            <div>
+              <p class="about-story-label">ONZE TRACK</p>
+              <h2>Track 1: De toekomst van toerisme</h2>
+              <p>Onderzoek hoe toerisme eruit ziet in 2040 en ontwerp een vernieuwend concept voor Noord-Nederland. Maak van de regio een aantrekkelijke en toekomstbestendige bestemming voor bewoners én bezoekers.</p>
+              <p class="about-story-client"><strong>Opdrachtgever:</strong> Nederlands Bureau voor Toerisme &amp; Congressen</p>
+            </div>
+          </article>
+          <article class="about-story-card about-story-idea">
+            <span class="about-story-number">04</span>
+            <div>
+              <p class="about-story-label">ONS IDEE: NOORD-ONTDEKT</p>
+              <p>En zo zijn we bij ons idee Noord-Ontdekt gekomen. Met dit idee willen we het toerisme in Noord-Nederland in 2040 verbeteren en mensen stimuleren om minder op hun telefoon te zitten. Met de Noord-Ontdekt-app worden toeristen aangemoedigd om meer te bewegen en de omgeving te ontdekken. Door bijvoorbeeld te wandelen, fietsen of zwemmen kunnen ze punten verdienen. Deze punten kunnen ze vervolgens inwisselen voor gratis toegang tot musea in Noord-Nederland. Zo ontdekken toeristen nieuwe plekken, zijn ze actief bezig en zitten ze minder op hun telefoon.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="ai">
+        <div class="page-title"><div><h1 data-view-title="ai"><i>Noord AI</i></h1></div></div>
+        <div class="hero-row">
+          <div><p class="eyebrow">NOORD AI · JOUW ROUTECOACH</p><h2>Ga naar buiten.<br><i>Ontdek Noord.</i></h2><p class="intro">Elke kilometer brengt je dichter bij een nieuw verhaal.</p></div>
+          <div class="streak-card"><span class="streak-icon">✳</span><strong>5 dagen</strong><span>op rij buiten</span></div>
+        </div>
+        <div class="ai-coach-note"><span class="ai-avatar">AI</span><p><strong>Noord AI zegt:</strong> “Het is helder vandaag. Een rustige fietstocht langs het Reitdiep past perfect bij jouw streak.”</p><span class="ai-spark">✦</span></div>
+        <div class="ai-chat">
+          <p class="ai-chat-intro">Vraag Noord AI om inspiratie voor een route of ontdekking in jouw buurt.</p>
+          <div class="chat-header">
+            <span class="ai-avatar">AI</span>
+            <div><strong>Noord AI</strong><small>Jouw persoonlijke ontdekcoach · nu actief</small></div>
+            <span class="chat-status"></span>
+          </div>
+          <div class="chat-messages">
+            <div class="chat-message ai-message">Hoi Mercedes! Ik zie dat je vandaag <strong>6,7 km hebt gefietst</strong> naar Makkinga. Lekker bezig! ✦<span>09:42</span></div>
+            <div class="chat-message user-message">Oké, kan je een leuke route bij Oosterwolde voor me maken?<span>09:44</span></div>
+            <div class="chat-message ai-message">Zeker! Ik heb een mooie fietsroute voor je samengesteld langs het Fochteloërveen en het centrum van Oosterwolde.<span class="route-link">Route bekijken: noordontdekt.nl/routes/oosterwolde-fochteloo</span><small>Ongeveer 18 km · rustig tempo · natuur en uitzicht</small><span>09:44</span></div>
+            <div class="chat-message user-message">Ik heb de route gefietst!<span>11:18</span></div>
+            <div class="chat-message ai-message">Goed zo, Mercedes! Je hebt <strong>18 km gefietst</strong> bij Oosterwolde. Dat levert je <strong>180 punten</strong> op. Weer een mooie ontdekking erbij! ✦<span>11:19</span></div>
+          </div>
+          <div class="chat-reply-bar">
+            <input type="text" aria-label="Typ hier een bericht" placeholder="Typ hier..." autocomplete="off" />
+          </div>
+        </div>
+        <div class="points-banner">
+          <div class="points-copy"><span class="eyebrow light">JOUW SALDO</span><div class="big-points"><strong id="points-total">1.240</strong><span>punten</span></div><p>Nog 28.760 punten tot je eerste museumbezoek.</p></div>
+          <div class="progress-wrap"><div class="progress-label"><span>Volgende beloning</span><strong>Vanaf 30.000 pnt</strong></div><div class="progress-track"><div class="progress-value" id="progress-value"></div></div><span class="progress-caption">Museumkaartje naar keuze</span></div>
+          <div class="points-sun">✳</div>
+        </div>
+        <div class="section-heading"><div><p class="eyebrow">BEWEGING VANDAAG</p><h2>Wat ga je doen?</h2></div><span class="live-tag"><span></span> Live tracking</span></div>
+        <div class="activity-grid">
+          <button class="activity-card selected" data-activity="Fietsen" data-points="124"><span class="activity-symbol">⌁</span><strong>Fietsen</strong><span>12,4 km <b>+124 pnt</b></span></button>
+          <button class="activity-card" data-activity="Wandelen" data-points="580"><span class="activity-symbol">⌁</span><strong>Wandelen</strong><span>5,8 km <b>+580 pnt</b></span></button>
+          <button class="activity-card" data-activity="Rennen" data-points="620"><span class="activity-symbol">↗</span><strong>Rennen</strong><span>6,2 km <b>+620 pnt</b></span></button>
+          <button class="activity-card" data-activity="Zwemmen" data-points="300"><span class="activity-symbol">≋</span><strong>Zwemmen</strong><span>1,2 km <b>+300 pnt</b></span></button>
+        </div>
+        <div class="tracking-panel"><div class="tracking-map"><div class="map-grid"></div><div class="route-line"></div><span class="map-pin pin-a"></span><span class="map-pin pin-b"></span><span class="map-label">Noorderplantsoen</span></div><div class="tracking-info"><span class="eyebrow">KLAAR OM TE GAAN?</span><h3>Laat de route<br>maar komen.</h3><p>De Noord-AI houdt je afstand bij en zet elke kilometer om in punten.</p><button class="primary-button" id="tracking-button"><span>◉</span> Start mijn route</button><small id="tracking-status">Locatie wordt alleen tijdens je activiteit gebruikt.</small></div></div>
+        <div class="recent-heading"><h2>Jouw recente ontdekking</h2><button class="text-button">Alles bekijken →</button></div>
+        <div class="recent-row"><div class="recent-icon">⌁</div><div><strong>Fietstocht langs het Reitdiep</strong><span>Vandaag, 09:42 · 12,4 km</span></div><b class="earned">+124</b><span class="points-label">punten</span></div>
+      </section>
+
+      <section class="view" id="musea">
+        <div class="page-title museum-page-title">
+          <div>
+            <h1 data-view-title="musea"><span>Kies je </span><i>musea</i></h1>
+            <p class="intro">Ruil je punten in voor musea in Noord-Nederland.</p>
+            <div class="balance-pill museum-balance">1.240 <span>punten</span></div>
+          </div>
+        </div>
+        <div class="museum-filter" aria-label="Filter musea op provincie">
+          <button class="filter active" data-province="all">Alle</button>
+          <button class="filter" data-province="Friesland">Friesland</button>
+          <button class="filter" data-province="Groningen">Groningen</button>
+          <button class="filter" data-province="Drenthe">Drenthe</button>
+        </div>
+        <div class="museum-grid">
+          <article class="museum-card featured" data-province="Groningen" data-city="Groningen" data-website="https://forum.nl/" data-description="Bekijk de interactieve tentoonstellingen van Storyworld, struin door de bibliotheek, bezoek een film in de cinema en geniet van het uitzicht vanaf het dakterras.">
+            <div class="museum-image image-groningen"><img src="https://static.forum.nl/cache/.3212/-s1920x1080.jpg" alt="Forum Groningen" loading="lazy"><span class="museum-tag">Populair</span></div>
+            <div class="museum-content"><div class="museum-meta"><span class="museum-province">Groningen</span><span class="museum-cost">34.000 punten</span></div><h3>Forum Groningen</h3><button class="museum-button">Bekijk ontdekking <span>→</span></button></div>
+          </article>
+          <article class="museum-card" data-province="Groningen" data-city="Groningen" data-website="https://www.groningermuseum.nl/" data-description="Bekijk wisselende tentoonstellingen met moderne en hedendaagse kunst, design en mode en ontdek de kleurrijke architectuur van het museum.">
+            <div class="museum-image image-groningen"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/20110807_Groninger_Museum_Groningen_NL.jpg/960px-20110807_Groninger_Museum_Groningen_NL.jpg" alt="Groninger Museum" data-photo-credit="Wutsje" data-photo-source="https://commons.wikimedia.org/wiki/File:20110807_Groninger_Museum_Groningen_NL.jpg" data-photo-license="CC BY-SA 3.0" data-photo-license-url="https://creativecommons.org/licenses/by-sa/3.0/" loading="lazy"></div>
+            <div class="museum-content"><div class="museum-meta"><span class="museum-province">Groningen</span><span class="museum-cost">34.000 punten</span></div><h3>Groninger Museum</h3><button class="museum-button">Bekijk ontdekking <span>→</span></button></div>
+          </article>
+          <article class="museum-card" data-province="Groningen" data-city="Delfzijl" data-website="https://www.muzeeaquarium.nl/" data-description="Bekijk vissen en andere zeedieren in het aquarium en ontdek schelpen, fossielen, scheepswrakken en de maritieme geschiedenis van Delfzijl.">
+            <div class="museum-image image-groningen"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Muzeeaquarium_Delfzijl_%282024%29-2.jpg/960px-Muzeeaquarium_Delfzijl_%282024%29-2.jpg" alt="Muzeeaquarium Delfzijl" data-photo-credit="Sneeuwvlakte" data-photo-source="https://commons.wikimedia.org/wiki/File:Muzeeaquarium_Delfzijl_(2024)-2.jpg" data-photo-license="CC BY-SA 4.0" data-photo-license-url="https://creativecommons.org/licenses/by-sa/4.0" loading="lazy"></div>
+            <div class="museum-content"><div class="museum-meta"><span class="museum-province">Groningen</span><span class="museum-cost">30.000 punten</span></div><h3>Muzeeaquarium</h3><button class="museum-button">Bekijk ontdekking <span>→</span></button></div>
+          </article>
+          <article class="museum-card" data-province="Friesland" data-city="Leeuwarden" data-website="https://natuurmuseumfryslan.nl/" data-description="Ontdek de Friese natuur in interactieve tentoonstellingen en ga op onderwateravontuur met de OnderWaterSafari.">
+            <div class="museum-image image-friesland"><img src="https://natuurmuseumfryslan.nl/wp-content/uploads/2026/08/DSC_2099-366x176.jpg" alt="Natuurmuseum Fryslân" loading="lazy"><span class="museum-tag">Nieuw</span></div>
+            <div class="museum-content"><div class="museum-meta"><span class="museum-province">Friesland</span><span class="museum-cost">32.000 punten</span></div><h3>Natuurmuseum Fryslân</h3><button class="museum-button">Bekijk ontdekking <span>→</span></button></div>
+          </article>
+          <article class="museum-card" data-province="Friesland" data-city="Franeker" data-description="Bekijk in Eise Eisinga's woonkamer hoe het bewegende planetarium de stand van de zon, maan en planeten laat zien en ontdek hoe hij het uurwerk bouwde.">
+            <div class="museum-image image-friesland"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Franeker%2C_Planetarium.jpg/960px-Franeker%2C_Planetarium.jpg" alt="Planetarium Eise Eisinga" data-photo-credit="Bouwe Brouwer" data-photo-source="https://commons.wikimedia.org/wiki/File:Franeker,_Planetarium.jpg" data-photo-license="CC BY-SA 3.0" data-photo-license-url="https://creativecommons.org/licenses/by-sa/3.0/" loading="lazy"></div>
+            <div class="museum-content"><div class="museum-meta"><span class="museum-province">Friesland</span><span class="museum-cost">34.000 punten</span></div><h3>Planetarium Eise Eisinga</h3><button class="museum-button">Bekijk ontdekking <span>→</span></button></div>
+          </article>
+          <article class="museum-card" data-province="Friesland" data-city="Sneek" data-website="https://www.friesscheepvaartmuseum.nl/" data-description="Bekijk scheepsmodellen, schilderijen en voorwerpen uit de Friese scheepvaart en ontdek hoe water, zeilen en handel het leven in Friesland vormden.">
+            <div class="museum-image image-friesland"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Fries_Scheepvaart_Museum_-_Kleinzand_12-18%2C_Sneek.jpg/960px-Fries_Scheepvaart_Museum_-_Kleinzand_12-18%2C_Sneek.jpg" alt="Fries Scheepvaart Museum" data-photo-credit="Condor3d" data-photo-source="https://commons.wikimedia.org/wiki/File:Fries_Scheepvaart_Museum_-_Kleinzand_12-18,_Sneek.jpg" data-photo-license="CC BY-SA 4.0" data-photo-license-url="https://creativecommons.org/licenses/by-sa/4.0" loading="lazy"></div>
+            <div class="museum-content"><div class="museum-meta"><span class="museum-province">Friesland</span><span class="museum-cost">30.000 punten</span></div><h3>Fries Scheepvaart Museum</h3><button class="museum-button">Bekijk ontdekking <span>→</span></button></div>
+          </article>
+          <article class="museum-card" data-province="Drenthe" data-city="Assen" data-website="https://drentsmuseum.nl/" data-description="Bekijk archeologische vondsten uit Drenthe en bezoek tentoonstellingen over kunst en geschiedenis. Ontdek hoe mensen hier vroeger leefden.">
+            <div class="museum-image image-drenthe"><img src="https://drentsmuseum.nl/media/1/gebouwen/_1200x630_crop_center-center_82_none_ns/se20241031-DM-Labyrinthia-39.jpg?v=1791454116" alt="Drents Museum" loading="lazy"></div>
+            <div class="museum-content"><div class="museum-meta"><span class="museum-province">Drenthe</span><span class="museum-cost">34.000 punten</span></div><h3>Drents Museum</h3><button class="museum-button">Bekijk ontdekking <span>→</span></button></div>
+          </article>
+          <article class="museum-card" data-province="Drenthe" data-city="Emmen" data-website="https://www.veenpark.nl/" data-description="Wandel door nagebouwde veendorpen, bekijk oude ambachten en ontdek hoe veenarbeiders vroeger leefden. Maak ook een rit met het smalspoortreintje door het park.">
+            <div class="museum-image image-drenthe"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Veenpark_Barger-Compascuum.jpg/960px-Veenpark_Barger-Compascuum.jpg" alt="Veenpark" loading="lazy"></div>
+            <div class="museum-content"><div class="museum-meta"><span class="museum-province">Drenthe</span><span class="museum-cost">30.000 punten</span></div><h3>Veenpark</h3><button class="museum-button">Bekijk ontdekking <span>→</span></button></div>
+          </article>
+          <article class="museum-card" data-province="Drenthe" data-city="Hoogeveen" data-description="Bekijk voorwerpen, foto's en verhalen over de geschiedenis van Hoogeveen en ontdek hoe het veengebied en de stad zich ontwikkelden.">
+            <div class="museum-image image-drenthe"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Museum_De_5000_Morgen.JPG/960px-Museum_De_5000_Morgen.JPG" alt="Museum De 5000 Morgen" data-photo-credit="Silver Spoon" data-photo-source="https://commons.wikimedia.org/wiki/File:Museum_De_5000_Morgen.JPG" data-photo-license="CC BY-SA 3.0" data-photo-license-url="https://creativecommons.org/licenses/by-sa/3.0/" loading="lazy"></div>
+            <div class="museum-content"><div class="museum-meta"><span class="museum-province">Drenthe</span><span class="museum-cost">30.000 punten</span></div><h3>De 5000 Morgen</h3><button class="museum-button">Bekijk ontdekking <span>→</span></button></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="klassement">
+        <div class="page-title"><div><h1 data-view-title="klassement"><span>Het </span><i>leaderboard</i></h1><p class="intro">Vergelijk je score met andere en bekijk je positie op het leaderboard.</p></div></div>
+        <div class="leaderboard-wrap">
+          <div class="leader-top">
+            <div class="leader-tabs" role="group" aria-label="Kies leaderboardperiode">
+              <button class="active" data-period="month" aria-pressed="true">Deze maand</button>
+              <button data-period="all-time" aria-pressed="false">Alle tijden</button>
+            </div>
+          </div>
+          <div class="podium" id="leaderPodium"></div>
+          <div class="leaderboard-content">
+            <div class="rank-list">
+              <div class="rank-section-title"><h2 id="leaderRanksTitle">Top 10</h2></div>
+              <div class="rank-heading"><span>RANG</span><span>ONTDEKKER</span><span>ACTIVITEITEN</span><span>PUNTEN</span></div>
+              <div id="leaderRanks"></div>
+              <div class="leaderboard-pagination" aria-label="Leaderboardpagina's">
+                <button class="leaderboard-page-button" id="leaderboardPrevious" type="button">Vorige</button>
+                <button class="leaderboard-page-button" id="leaderboardNext" type="button">Volgende</button>
+              </div>
+            </div>
+            <section class="your-score-section" id="yourScoreSection" aria-labelledby="yourScoreTitle" hidden>
+              <div class="rank-section-title"><h2 id="yourScoreTitle">Jouw score</h2></div>
+              <div id="leaderSelf"></div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="kaart">
+        <div class="page-title">
+          <div>
+            <p class="eyebrow">PLEKKEN OM TE ONTDEKKEN</p>
+            <h1 data-view-title="kaart"><span>De </span><i>Noord-Ontdekt kaart</i></h1>
+            <p class="intro">Op deze kaart vind je de beste wandel-, zwem- en fietsspots en leuke musea in Noord-Nederland.</p>
+          </div>
+          <div class="balance-pill"><span id="mapSpotCount">0</span> <span>spots</span></div>
+        </div>
+        <div class="map-toolbar" role="group" aria-label="Filter kaartplekken">
+          <span>Ontdekplekken in Noord-Nederland</span>
+          <button class="map-filter active" type="button" data-map-filter="all" aria-pressed="true">Alles</button>
+          <button class="map-filter" type="button" data-map-filter="wandelen" aria-pressed="false">Wandelen</button>
+          <button class="map-filter" type="button" data-map-filter="zwemmen" aria-pressed="false">Zwemmen</button>
+          <button class="map-filter" type="button" data-map-filter="fietsen" aria-pressed="false">Fietsen</button>
+          <button class="map-filter" type="button" data-map-filter="musea" aria-pressed="false">Musea</button>
+        </div>
+        <div class="spots-layout">
+          <div class="map-frame">
+            <div id="north-map" aria-label="Interactieve kaart van Noord-Nederland"></div>
+            <div class="map-overlay-label"><span class="map-live-dot"></span> LIVE ONTDEKKAART</div>
+            <p class="map-status" id="mapStatus" role="status" hidden></p>
+          </div>
+          <div class="spot-list" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="view" id="geschiedenis">
+        <div class="page-title history-page-heading">
+          <div><h1 data-view-title="geschiedenis"><span>Jouw </span><i>geschiedenis</i></h1></div>
+        </div>
+        <div class="history-hero">
+          <div>
+            <p class="eyebrow">JOUW BUITENLOGBOEK</p>
+            <p class="intro">Alles wat je buiten hebt ontdekt, overzichtelijk bij elkaar.</p>
+          </div>
+          <div class="balance-pill"><span id="historyHeroDistance">48,6</span> <span>km totaal</span></div>
+        </div>
+        <div class="history-summary">
+          <div>
+            <svg class="history-stat-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 17.5 9 12l3 3 7-8"/><path d="M14 7h5v5"/></svg>
+            <span class="eyebrow">TOTAAL AFGELEGD</span><strong id="historyDistance">48,6 km</strong><small id="historyActivityCount">5 activiteiten · 2026</small>
+          </div>
+          <div>
+            <svg class="history-stat-icon points" aria-hidden="true" viewBox="0 0 24 24"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg>
+            <span class="eyebrow">PUNTEN VERDIEND</span><strong id="historyPoints">+2.052</strong><small id="historyYearLabel">2026</small>
+          </div>
+          <div>
+            <svg class="history-stat-icon route" aria-hidden="true" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h3a3 3 0 0 0 3-3v-2a3 3 0 0 1 3-3h1"/></svg>
+            <span class="eyebrow">LANGSTE ROUTE</span><strong id="historyLongestDistance">20,8 km</strong><small id="historyLongestLabel">Langste route in dit jaar</small>
+          </div>
+        </div>
+        <div class="history-list">
+          <div class="history-head">
+            <h2>Recente activiteiten</h2>
+            <label class="history-year-filter">
+              <span class="sr-only">Kies jaar</span>
+              <select class="filter active" id="historyYearPicker" aria-label="Kies jaar">
+                <option value="2026">2026</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+              </select>
+            </label>
+          </div>
+          <div id="historyActivityRows" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+    <div class="bottom-userbar" aria-label="Account overzicht">
+      <div class="account-user">
+        <div class="account-avatar">MB</div>
+        <div>
+          <strong>Mercedes B.</strong>
+          <small><span>Account</span> <span class="account-rank">Rang #1</span></small>
+        </div>
+      </div>
+      <div class="account-points" aria-label="Punten overzicht">
+        <span>Punten</span>
+        <strong>1.240</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="logo-modal" id="logoModal" aria-hidden="true">
+    <div class="logo-modal-backdrop" data-close-logo-modal="true"></div>
+    <div class="logo-modal-panel" role="dialog" aria-modal="true" aria-label="Groot logo">
+      <button class="logo-modal-close" type="button" aria-label="Sluit groot logo">✕</button>
+      <span class="logo-modal-mark" aria-hidden="true">
+        <img src="logo-app.png" alt="" class="logo-modal-image" />
+      </span>
+      <strong class="logo-modal-name">Noord Ontdekt</strong>
+    </div>
+  </div>
+
+  <div class="museum-detail-modal" id="museumDetailModal" aria-hidden="true">
+    <div class="museum-detail-backdrop" data-close-museum-modal="true"></div>
+    <section class="museum-detail-panel" role="dialog" aria-modal="true" aria-labelledby="museumDetailTitle">
+      <button class="museum-detail-close" type="button" aria-label="Sluit museuminformatie">✕</button>
+      <div class="museum-detail-image" id="museumDetailImage"></div>
+      <div class="museum-detail-content">
+        <div class="museum-detail-meta">
+          <span id="museumDetailLocation"></span>
+          <span class="museum-cost" id="museumDetailCost"></span>
+        </div>
+        <h2 id="museumDetailTitle"></h2>
+        <p id="museumDetailDescription"></p>
+        <a class="museum-detail-website" id="museumDetailWebsite" target="_blank" rel="noopener noreferrer" hidden>Bezoek de museumwebsite ↗</a>
+        <div class="museum-detail-actions">
+          <button class="museum-detail-redeem" type="button">Punten inruilen</button>
+          <div class="museum-detail-balance"><span>Jouw punten</span><strong id="museumDetailBalance">1.240</strong></div>
+        </div>
+        <p class="museum-detail-notice" id="museumDetailNotice" role="status" hidden></p>
+      </div>
+    </section>
+  </div>
+
+  <div class="mobile-menu-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-menu" aria-label="Mobiele navigatie">
+    <div class="mobile-menu-header">
+      <div class="mobile-menu-brand brand-modal-trigger" role="button" tabindex="0" aria-label="Noord Ontdekt logo openen">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="logo-app.png" alt="" class="brand-logo" />
+        </span>
+        <strong>Noord Ontdekt</strong>
+      </div>
+      <button class="mobile-menu-close" type="button" aria-label="Menu sluiten">✕</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Hoofdnavigatie">
+      <button class="nav-item active" data-tab="home"><span class="nav-icon">⌂</span> Home</button>
+      <button class="nav-item" data-tab="ai"><span class="nav-icon">✦</span> Noord AI</button>
+      <button class="nav-item" data-tab="musea"><span class="nav-icon">○</span> Musea</button>
+      <button class="nav-item" data-tab="klassement"><span class="nav-icon">↗</span> Leaderboard</button>
+      <button class="nav-item" data-tab="kaart"><span class="nav-icon">⌖</span> Kaart</button>
+      <button class="nav-item" data-tab="geschiedenis"><span class="nav-icon">↺</span> Geschiedenis</button>
+    </nav>
+  </aside>
+
+  <div class="toast" id="toast">Route gestart. Veel ontdekplezier!</div>
+  <script src="translations.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="app.js"></script>
+</body>
+</html>

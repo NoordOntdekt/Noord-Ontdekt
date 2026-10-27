@@ -1,0 +1,242 @@
+.museum-balance {
+  display: table;
+  margin-top: 18px;
+}
+
+.museum-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.museum-province {
+  color: var(--deep);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.museum-cost {
+  flex: 0 0 auto;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--yellow);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.museum-detail-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 210;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.museum-detail-modal.is-open {
+  display: flex;
+}
+
+.museum-detail-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 25, 22, .68);
+  backdrop-filter: blur(2px);
+}
+
+.museum-detail-panel {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 560px);
+  max-height: min(90vh, 760px);
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--paper);
+  box-shadow: 0 24px 64px rgba(15, 35, 24, .28);
+}
+
+.museum-detail-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(33, 75, 53, .16);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .94);
+  color: var(--ink);
+  font-size: 21px;
+}
+
+.museum-detail-image {
+  position: relative;
+  height: 210px;
+  background: linear-gradient(135deg, #dcefe3, #b7ddec);
+}
+
+.museum-detail-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.museum-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.museum-photo-credit {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  z-index: 2;
+  display: flex;
+  gap: 5px;
+  padding: 5px 7px;
+  background: rgba(20, 35, 29, .78);
+  color: #fff;
+  font: 9px/1.3 var(--mono);
+}
+
+.museum-photo-credit a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.museum-detail-image.image-groningen {
+  background: linear-gradient(135deg, #c8dfd0, #9ac9b2 55%, #6caa89);
+}
+
+.museum-detail-image.image-friesland {
+  background: linear-gradient(135deg, #d5e8dc, #a8d1be 55%, #75b6a0);
+}
+
+.museum-detail-image.image-drenthe {
+  background: linear-gradient(135deg, #dce9cf, #b8d2a2 55%, #82a975);
+}
+
+.museum-detail-content {
+  padding: 25px 28px 28px;
+}
+
+.museum-detail-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--deep);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.museum-detail-content h2 {
+  margin: 16px 0 10px;
+  color: var(--ink);
+  font: 800 clamp(24px, 5vw, 32px)/1.15 var(--sans);
+  letter-spacing: -.04em;
+}
+
+.museum-detail-content p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.museum-detail-website {
+  display: inline-block;
+  margin-top: 17px;
+  color: var(--deep);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.museum-detail-website[hidden] {
+  display: none;
+}
+
+.museum-detail-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.museum-detail-redeem {
+  flex: 1 1 auto;
+  min-height: 48px;
+  padding: 12px 18px;
+  border-radius: 9px;
+  background: var(--deep);
+  color: #fff;
+  font-weight: 700;
+}
+
+.museum-detail-balance {
+  display: grid;
+  justify-items: end;
+  gap: 3px;
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.museum-detail-balance strong {
+  color: var(--ink);
+  font: 700 18px var(--mono);
+}
+
+.museum-detail-notice {
+  margin: 14px 0 0 !important;
+  padding: 11px 13px;
+  border: 1px solid #d8e1d7;
+  border-radius: 9px;
+  background: #f3efe3;
+  color: var(--ink) !important;
+  font-size: 12px !important;
+}
+
+.museum-detail-notice[hidden] {
+  display: none;
+}
+
+@media (max-width: 520px) {
+  .museum-detail-modal {
+    padding: 12px;
+  }
+
+  .museum-detail-panel {
+    border-radius: 17px;
+  }
+
+  .museum-detail-image {
+    height: 170px;
+  }
+
+  .museum-detail-content {
+    padding: 21px 19px 22px;
+  }
+
+  .museum-detail-actions {
+    gap: 10px;
+  }
+
+  .museum-detail-redeem {
+    padding-right: 12px;
+    padding-left: 12px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://noordontdekt.github.io/Noord-Ontdekt/sitemap.xml
